@@ -11,7 +11,12 @@ namespace MVC_ModelDemo.Controllers
 {
     public class BookController : Controller
     {
-        private readonly BookRepo _bookrepository = new BookRepo();
+        //private readonly BookRepo _bookrepository = new BookRepo();
+        private readonly IBookRepo _bookrepository;
+        public BookController(IBookRepo bookRepo)
+        {
+            _bookrepository = bookRepo;
+        }
         public IActionResult Index()
         {
             Book book = new Book();
@@ -102,9 +107,6 @@ namespace MVC_ModelDemo.Controllers
             }
             
         }
-
-
-
 
 
         [HttpGet]

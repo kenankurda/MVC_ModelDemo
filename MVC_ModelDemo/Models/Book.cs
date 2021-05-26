@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace MVC_ModelDemo.Models
 {
-    public class Book
+    public class Book 
     {
         [Required]
         public int Id { get; set; }
         [Required]
-        [MinLength(5)]        
+        [MinLength(5)]
         [MaxLength(15)]
 
         public string Title { get; set; }

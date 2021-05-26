@@ -9,7 +9,11 @@ namespace MVC_ModelDemo.Controllers
 {
     public class PersonController : Controller
     {
-        private readonly PersonRepo _personRepository = new PersonRepo();
+        private readonly IPersonRepo _personRepository;
+        public PersonController(IPersonRepo personRepo)
+        {
+            _personRepository = personRepo;
+        }
 
         public IActionResult Index()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVC_ModelDemo.Repository
 {
-    public class BookRepo
+    public class BookRepo : IBookRepo
     {
         private static List<Book> _list = new List<Book>();
         public List<Book> Database

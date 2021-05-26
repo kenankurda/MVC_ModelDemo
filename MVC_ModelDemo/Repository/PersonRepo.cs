@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVC_ModelDemo.Repository
 {
-    public class PersonRepo
+    public class PersonRepo : IPersonRepo
     {
         public List<Person> GetAllPersons()
         {
